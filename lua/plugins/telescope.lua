@@ -53,7 +53,14 @@ return {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
-        -- pickers = {}
+        pickers = {
+          find_files = {
+            hidden = true,
+            no_ignore = false,
+            no_ignore_parent = false,
+            find_command = { 'rg', '--files', '--glob', '!.git' },
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
