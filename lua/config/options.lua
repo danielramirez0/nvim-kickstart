@@ -25,3 +25,7 @@ vim.o.inccommand = 'split' -- Preview substitutions live, as you type!
 vim.o.cursorline = true -- Show which line your cursor is on
 vim.o.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.confirm = true -- Prompt on fail due to unsaved changes in buffer See `:help 'confirm'`
+vim.o.expandtab = true -- Set tab keypress to insert spaces
+vim.o.tabstop = 4 -- Set tab spaces display size (will still be tabs if they were tabs).
+vim.o.shiftwidth = 4 -- Set autoindent for tab
+vim.o.softtabstop = 4 -- Make backspace delete number of spaces set when deleting tabs
