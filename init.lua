@@ -14,6 +14,7 @@ require 'config.lazy'
 -- [[ Configure and install plugins ]]
 require('lazy').setup({
   { import = 'custom.plugins' },
+  { import = 'kickstart.plugins' },
   { import = 'plugins' },
 }, {
   ui = {

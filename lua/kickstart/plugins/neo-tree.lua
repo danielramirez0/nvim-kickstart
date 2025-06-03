@@ -16,8 +16,26 @@ return {
   opts = {
     filesystem = {
       window = {
+        position = 'float',
         mappings = {
           ['\\'] = 'close_window',
+        },
+      },
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        hide_by_name = {
+          '.DS_Store',
+          'thumbs.db',
+          --"node_modules",
+        },
+      },
+      event_handlers = {
+        {
+          event = 'file_open_requested',
+          handler = function()
+            require('neo-tree.command').execute { action = 'close' }
+          end,
         },
       },
     },
