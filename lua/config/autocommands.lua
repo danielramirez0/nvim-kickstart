@@ -8,3 +8,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+-- Set mdx to markdown filetype
+vim.api.nvim_create_autocmd({ 'BufReadPost', 'BufNewFile' }, {
+  pattern = '*.mdx',
+  callback = function()
+    vim.bo.filetype = 'markdown'
+  end,
+  desc = 'Set .mdx files to markdown filetype',
+})

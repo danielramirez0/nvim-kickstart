@@ -58,7 +58,7 @@ return {
             hidden = true,
             no_ignore = false,
             no_ignore_parent = false,
-            find_command = { 'rg', '--files', '--glob', '!.git' },
+            find_command = { 'rg', '--files', '--glob', '!.git', '-L' },
           },
         },
         extensions = {
